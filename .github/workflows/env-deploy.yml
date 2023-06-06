@@ -40,7 +40,7 @@ jobs:
       url: https://github.com/${{ github.repository }}/releases/tag/v${{ vars.DEV_VERSION }}    
     
     steps:
-       - name: Download candidate artifacts
+      - name: Download candidate artifacts
         uses: actions/download-artifact@v3       
         with:
           name: archive.zip 
