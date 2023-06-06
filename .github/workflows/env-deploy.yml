@@ -1,5 +1,4 @@
 name: Deployments example
-
 on:
   push:
     branches: [ "main", "dev" ]
