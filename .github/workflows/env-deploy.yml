@@ -58,7 +58,7 @@ jobs:
           prerelease: true
           draft: true
           name: dev
-          files: greetings.jar           
+          files: greetings-deploy.jar           
             
   deploy-prod:
   
@@ -87,4 +87,4 @@ jobs:
           token: ${{ secrets.PROD_TOKEN }}
           generate_release_notes: true
           name: Production
-          files: greetings.jar 
+          files: greetings-deploy.jar 
