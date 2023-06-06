@@ -40,11 +40,7 @@ jobs:
       url: https://github.com/${{ github.repository }}/releases/tag/v${{ vars.DEV_VERSION }}    
     
     steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-        
-      - name: Download candidate artifacts
+       - name: Download candidate artifacts
         uses: actions/download-artifact@v3       
         with:
           name: archive.zip 
@@ -68,12 +64,8 @@ jobs:
     environment: 
       name: production
       url: https://github.com/${{ github.repository }}/releases/tag/v${{ vars.PROD_VERSION }}
-    steps:
-    
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          
+      
+    steps:      
       - name: Download candidate artifacts
         uses: actions/download-artifact@v3       
         with:
